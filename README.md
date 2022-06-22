@@ -1,0 +1,1 @@
+El motor de plantilla que más me gustó fue el Ejs, por su facilidad y sencillez de uso, su sintáxis amigable y la capacidad de soportar código JavaScript

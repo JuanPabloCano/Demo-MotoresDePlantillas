@@ -1,0 +1,33 @@
+<% if(products.length) {%>
+    <table class="table table-hover table-dark mt-5">
+        <% products.forEach(product=> {%>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        Nombre del producto
+                    </th>
+                    <th scope="row">
+                        Precio
+                    </th>
+                    <th scope="row">
+                        Imagen
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <%= product.title %>
+                    </td>
+                    <td>
+                        <%= product.price %>
+                    </td>
+                    <td>
+                        <%= product.thumbnail %>
+                    </td>
+            </tbody>
+            <% }) %>
+    </table>
+    <% } else {%>
+        <h1 class="mt-5" style="color: red">No hay productos cargados</h1>
+        <% } %>

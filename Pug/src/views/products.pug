@@ -1,0 +1,14 @@
+extends main.pug 
+
+block productos
+    table.table
+        tr
+        th Nombre del producto
+        th Precio
+        th Imagen
+        tbody
+        each product in products
+            tr
+                td #{product.title}
+                td #{product.price}
+                td #{product.thumbnail}

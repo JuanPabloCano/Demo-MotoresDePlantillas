@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")        
+        title Mi app
+    body 
+        .container
+            .row 
+                h1.display-6-d-flex-justify-content-center-mt-5 Añada un nuevo producto
+                form(action="/productos" method="post" class="form mt-4 d-flex justify-content-center")
+                    input.form-control-sm(type="text" name="title" placeholder="Titulo")
+                    input.form-control-sm(type="number" name="price" placeholder="Precio")
+                    input.form-control-sm(type="url" name="thumbnail" placeholder="Imagen")
+                    input(type="submit" value="Enviar")
+                br
+                table.table
+                    if products.length
+                        th.col Nombre del producto
+                        th.row Precio
+                        th.row Imagen
+                        each product in products
+                            tr
+                                td #{product.title}
+                                td #{product.price}
+                                td #{product.thumbnail}
+                    else 
+                        h1 No existen productos
